@@ -61,6 +61,13 @@
             display: block;
             font-size: 18px;
         }
+        .extra-menu{
+            margin: 5%;
+
+        }
+        .extra-menu a{
+            color: #fff;
+        }
     </style>
     <div class="clearfix"></div>
 
@@ -165,17 +172,127 @@
             </div>
 
         </div>
+       <div class="extra-menu">
+           <div class="container">
+               <div class="accordion" id="accordionExample" >
+                   <div class="card mt-3">
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   Qonunchilik
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="collapseOne" class="collapse   " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> Ma'muriyatning vakolatlari</a>
+                               <a class="btn btn-outline-primary" href="#"> Prezident qаrоr va fаrmопlаri</a>
+                               <a class="btn btn-outline-primary" href="#"> Hukumat qarorlari</a>
+                               <a class="btn btn-outline-primary" href="#">Qoida va tavsiyalar</a>
+                           </div>
+                       </div>
+
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#mamuriyat" aria-expanded="true" aria-controls="collapseOne">
+                                   Ma'muriyat
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="mamuriyat" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> Boshqaruv</a>
+                               <a class="btn btn-outline-primary" href="#"> Ma'muriyat tuzilmasi</a>
+                               <a class="btn btn-outline-primary" href="#"> xizmat vazifalari</a>
+                           </div>
+                       </div>
+
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Xizmatlar" aria-expanded="true" aria-controls="collapseOne">
+                                   Xizmatlar
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="Xizmatlar" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> E-Executive auksionida qatnashish tartibi</a>
+                               <a class="btn btn-outline-primary" href="#"> E-Executive auksionida sotish uсhuп mavjud bo'lgan уеr uchastkalari</a>
+                               <a class="btn btn-outline-primary" href="#"> Ariza|ar qabul qilish</a>
+                               <a class="btn btn-outline-primary" href="#"> Ochiq ma'lumotlar</a>
+                               <a class="btn btn-outline-primary" href="#"> Vitual qabul</a>
+                               <a class="btn btn-outline-primary" href="#"> Elektron hisobotlar</a>
+                               <a class="btn btn-outline-primary" href="#"> Bo'sh o'rinlar</a>
+                               <a class="btn btn-outline-primary" href="#"> Saytda ro'yxatdan o'ting</a>
+                           </div>
+                       </div>
+
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Afzalliklar" aria-expanded="true" aria-controls="collapseOne">
+                                   Afzalliklar
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="Afzalliklar" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> Yashash uchun subsidiyalar ajratish</a>
+                               <a class="btn btn-outline-primary" href="#"> sanitar-gigienik binolar uchun уеr ajratish</a>
+                               <a class="btn btn-outline-primary" href="#"> Тurореrаtоrlаr va gidlar uсhuп grantlar ajratish</a>
+                           </div>
+                       </div>
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jizzax" aria-expanded="true" aria-controls="collapseOne">
+                                   Jizzax viloyatining turizm salohiyati
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="jizzax" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> Roliklar</a>
+                               <a class="btn btn-outline-primary" href="#"> Маqоlаlаr</a>
+                               <a class="btn btn-outline-primary" href="#"> Sayyohlik yo'nalishlari</a>
+                               <a class="btn btn-outline-primary" href="#"> Joylashtirish vositalari</a>
+                               <a class="btn btn-outline-primary" href="#"> Diqqatga sаzочог joylar</a>
+                               <a class="btn btn-outline-primary" href="#"> lsh olib borilmoqda</a>
+                           </div>
+                       </div>
+
+                       <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Aloqa" aria-expanded="true" aria-controls="collapseOne">
+                                   Aloqa
+                               </button>
+                           </h2>
+                       </div>
+
+                       <div id="Aloqa" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                           <div class="card-body">
+                               <a class="btn btn-outline-primary" href="#"> Ma'muriyat bilan aloqa цsullari</a>
+                               <a class="btn btn-outline-primary" href="#"> Ijtimoiy tarmoqlardagi sahifalar</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
     </div>
+
 
     <!--End Dashboard Content-->
     <!--start overlay-->
     <div class="overlay toggle-menu"></div>
     <!--end overlay-->
 
-    </div>
-    <!-- End container-fluid-->
 
-    </div><!--End content-wrapper-->
+    <!-- End container-fluid-->
+    <!--End content-wrapper-->
     <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->

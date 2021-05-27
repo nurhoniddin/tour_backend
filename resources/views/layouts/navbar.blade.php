@@ -34,6 +34,8 @@
                 </span>
             </a>
         </li>
+{{--        dropdown new menu--}}
+        {{--        dropdown new menu--}}
         <li class="{{ request()->routeIs('tags.index') ? 'active' : '' }}">
             <a href="{{ route('tags.index') }}">
                 <i class="fa fa-tags"></i> <span class="text-uppercase">Teglar
@@ -45,6 +47,7 @@
                 </span>
             </a>
         </li>
+
 
 {{--        <li class="{{ request()->routeIs('questions.index') ? 'active' : '' }}">--}}
 {{--            <a href="{{ route('question.index') }}">--}}
@@ -133,7 +136,9 @@
 
 <!--Start topbar header-->
 <header class="topbar-nav">
+
     <nav class="navbar navbar-expand fixed-top">
+
         <ul class="navbar-nav mr-auto align-items-center">
             <li class="nav-item">
                 <a class="nav-link toggle-menu" href="javascript:void();">
