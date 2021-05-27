@@ -28,12 +28,18 @@
     }
     body{
         font-family: SFMono-Regular;
+        background-image: url({{asset('assets/images/bg-themes/login.jpeg')}});
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+        background-position:center-top;
     }
+
     .logo{
-        padding-top: 10%;
+        padding-top: 6%;
     }
 </style>
-<body style="background-image: url({{asset('assets/images/bg-themes/login.jpeg')}})">
+<body>
 
 <!-- start loader -->
 <div id="pageloader-overlay" class="visible incoming">
@@ -145,7 +151,6 @@
     <!--end color switcher-->
 
 </div><!--wrapper-->
-
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('asset/js/jquery.min.js') }}"></script>
 <script src="{{ asset('asset/js/popper.min.js') }}"></script>
