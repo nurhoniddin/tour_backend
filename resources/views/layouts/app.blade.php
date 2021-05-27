@@ -29,7 +29,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-theme bg-theme7" style="font-family: Noto">
+<style>
+    body{
+        background-color: #22143F;
+    }
+</style>
+<body  style="font-family: Noto">
 <div id="wrapper">
     @include('layouts.navbar')
     @yield('content')

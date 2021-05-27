@@ -3,13 +3,14 @@
 @section('content')
     <style>
         .card-counter{
-            box-shadow: 2px 2px 10px #DADADA;
+            box-shadow: 4px 4px 20px #381383;
             margin: 5px;
             padding: 20px 10px;
-            background-color: #fff;
             height: 100px;
             border-radius: 5px;
             transition: .3s linear all;
+            background-color: #22143F;
+            font-size: 41px;
         }
 
         .card-counter:hover{
@@ -37,9 +38,9 @@
             color: #FFF;
         }
 
-        .card-counter i{
+        card-counter i {
             font-size: 5em;
-            opacity: 0.2;
+            opacity: 0.4;
         }
 
         .card-counter .count-numbers{
@@ -54,7 +55,7 @@
             position: absolute;
             right: 35px;
             top: 65px;
-            font-style: italic;
+
             text-transform: capitalize;
             opacity: 0.5;
             display: block;
@@ -68,7 +69,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card-counter primary">
+                        <div class="card-counter">
                             <i class="fa fa-list"></i>
                             <span class="count-numbers">
                                 @php
@@ -80,7 +81,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card-counter danger">
+                        <div class="card-counter ">
                             <i class="fa fa-newspaper-o"></i>
                             <span class="count-numbers">
                                 @php
@@ -92,7 +93,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card-counter success">
+                        <div class="card-counter ">
                             <i class="fa fa-question"></i>
                             <span class="count-numbers">
                                  @php
@@ -104,7 +105,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card-counter info">
+                        <div class="card-counter ">
                             <i class="fa fa-envelope"></i>
                             <span class="count-numbers">
                                  @php
@@ -116,7 +117,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card-counter danger">
+                        <div class="card-counter ">
                             <i class="fa fa-tags"></i>
                             <span class="count-numbers">
                                  @php
@@ -128,7 +129,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card-counter info">
+                        <div class="card-counter ">
                             <i class="fa fa-gears"></i>
                             <span class="count-numbers">
                                  @php
@@ -139,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card-counter primary">
+                        <div class="card-counter ">
                             <i class="fa fa-bar-chart"></i>
                             <span class="count-numbers">
                                  @php
@@ -150,7 +151,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card-counter danger">
+                        <div class="card-counter ">
                             <i class="fa fa-picture-o"></i>
                             <span class="count-numbers">
                                  @php

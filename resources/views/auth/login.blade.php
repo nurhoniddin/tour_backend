@@ -22,66 +22,84 @@
     <link href="{{ asset('assets/css/app-style.css') }}" rel="stylesheet"/>
 
 </head>
-
-<body class="bg-theme bg-theme1">
+<style>
+    .login-main{
+        margin-top: 10%;
+    }
+    body{
+        font-family: SFMono-Regular;
+    }
+    .logo{
+        padding-top: 10%;
+    }
+</style>
+<body style="background-image: url({{asset('assets/images/bg-themes/login.jpeg')}})">
 
 <!-- start loader -->
-<div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
+<div id="pageloader-overlay" class="visible incoming">
+    <div class="loader-wrapper-outer">
+        <div class="loader-wrapper-inner">
+            <div class="loader"></div>
+        </div>
+    </div>
+</div>
 <!-- end loader -->
 
 <!-- Start wrapper-->
 <div id="wrapper">
 
     <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
-    <div class="card card-authentication1 mx-auto my-5">
-        <div class="card-body">
-            <div class="card-content p-2">
-                <div class="text-center">
-                    <img src="{{ asset('assets/images/logo.png') }}" style="width:189px" alt="logo icon">
+    <div class="login-main">
+        <div class="card card-authentication1 mx-auto my-5">
+            <div class="card-body">
+                <div class="card-content p-2">
+                    <h4 class="text-center text-uppercase">zomin admin</h4>
+                    <div class="card-title text-uppercase text-center py-3"></div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    {!! $error !!}
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{ route('login') }}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <div class="position-relative has-icon-right">
+                                <input type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <div class="form-control-position">
+                                    <i class="icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword" class="sr-only">Password</label>
+                            <div class="position-relative has-icon-right">
+                                <input id="password" type="password" name="password" placeholder="Password" class="form-control">
+                                <div class="form-control-position">
+                                    <i class="icon-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <div class="icheck-material-white">
+                                    <input type="checkbox" id="user-checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
+                                    <label for="user-checkbox">Eslab qolish</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-light btn-block">Kirish</button>
+                    </form>
                 </div>
-                <div class="card-title text-uppercase text-center py-3"></div>
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                {!! $error !!}
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                <form action="{{ route('login') }}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        <div class="position-relative has-icon-right">
-                            <input type="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                            <div class="form-control-position">
-                                <i class="icon-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword" class="sr-only">Password</label>
-                        <div class="position-relative has-icon-right">
-                            <input id="password" type="password" name="password" placeholder="Password" class="form-control">
-                            <div class="form-control-position">
-                                <i class="icon-lock"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-6">
-                            <div class="icheck-material-white">
-                                <input type="checkbox" id="user-checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
-                                <label for="user-checkbox">Eslab qolish</label>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-light btn-block">Kirish</button>
-                </form>
             </div>
         </div>
-
+    </div>
+    <div class="logo float-left">
+        <a target="_blank" href="https://napaautomotive.uz/ru"><img src="{{ asset('assets/images/logo.png') }}" style="width:189px" alt="logo icon"></a>
     </div>
 
     <!--Start Back To Top Button-->
