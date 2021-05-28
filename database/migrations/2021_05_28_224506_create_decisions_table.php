@@ -21,6 +21,7 @@ class CreateDecisionsTable extends Migration
             $table->string('link_uz')->nullable();
             $table->string('link_ru')->nullable();
             $table->string('link_en')->nullable();
+	        $table->integer('category_id')->nullable();
             $table->timestamps();
         });
     }

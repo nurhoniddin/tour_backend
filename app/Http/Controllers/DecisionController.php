@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Decision;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,21 @@ class DecisionController extends Controller
 	 */
 	public function create()
 	{
-		return view('decision.create');
+		//Categories drop down start
+		$categories = Category::where(['parent_id' => 0])->get();
+		$categories_dropdown = "<option value='0' selected>Kategoriyalar...</option>";
+		foreach ($categories as $cat) {
+			$categories_dropdown .= "<option value='" . $cat->id . "'>" . $cat->name_uz . "</option>";
+			$sub_categories = Category::where(['parent_id' => $cat->id])->get();
+			foreach ($sub_categories as $sub_cat) {
+				$categories_dropdown .= "<option value='" . $sub_cat->id . "'>&nbsp;--------&nbsp;" . $sub_cat->name_uz . "</option>";
+				$sub_cat = Category::where(['parent_id' => $sub_cat->id])->get();
+				foreach ($sub_cat as $sub_cat) {
+					$categories_dropdown .= "<option value='" . $sub_cat->id . "'>&nbsp;-------------------&nbsp;" . $sub_cat->name_uz . "</option>";
+				}
+			}
+		}
+		return view('decision.create',compact('categories_dropdown'));
 	}
 
 	/**
@@ -43,6 +58,7 @@ class DecisionController extends Controller
 		$data->link_uz = $request->input('link_uz');
 		$data->link_ru = $request->input('link_ru');
 		$data->link_en = $request->input('link_en');
+		$data->category_id = $request->input('category_id');
 		$data->save();
 		return redirect()->route('decision.index')
 			->with('success', 'Qaror qo\'shildi');
@@ -67,7 +83,21 @@ class DecisionController extends Controller
 	 */
 	public function edit(Decision $decision)
 	{
-		return view('decision.edit',compact('decision'));
+		//Categories drop down start
+		$categories = Category::where(['parent_id' => 0])->get();
+		$categories_dropdown = "<option value='0' selected>Kategoriyalar...</option>";
+		foreach ($categories as $cat) {
+			$categories_dropdown .= "<option value='" . $cat->id . "'>" . $cat->name_uz . "</option>";
+			$sub_categories = Category::where(['parent_id' => $cat->id])->get();
+			foreach ($sub_categories as $sub_cat) {
+				$categories_dropdown .= "<option value='" . $sub_cat->id . "'>&nbsp;--------&nbsp;" . $sub_cat->name_uz . "</option>";
+				$sub_cat = Category::where(['parent_id' => $sub_cat->id])->get();
+				foreach ($sub_cat as $sub_cat) {
+					$categories_dropdown .= "<option value='" . $sub_cat->id . "'>&nbsp;-------------------&nbsp;" . $sub_cat->name_uz . "</option>";
+				}
+			}
+		}
+		return view('decision.edit',compact('decision','categories_dropdown'));
 
 	}
 
@@ -86,6 +116,7 @@ class DecisionController extends Controller
 		$decision->link_uz = $request->input('link_uz');
 		$decision->link_ru = $request->input('link_ru');
 		$decision->link_en = $request->input('link_en');
+		$decision->category_id = $request->category_id;
 		$decision->save();
 		return redirect()->route('decision.index')
 			->with('success', 'Qaror Yangilandi');

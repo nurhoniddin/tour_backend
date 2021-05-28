@@ -25,6 +25,12 @@
 								<div class="col-lg-12">
 									<form action="{{ route('decision.store') }}" method="post">
 										@csrf
+										<div class="input-group pb-3">
+											<select name="category_id" class="custom-select text-uppercase" id="inputGroupSelect01" required>
+												<!-- <option value="0" select>Kategoriyalar...</option> -->
+												<?php echo $categories_dropdown; ?>
+											</select>
+										</div>
 										<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 											<li class="nav-item" role="presentation">
 												<a class="nav-link active" id="pills-home-tab"
