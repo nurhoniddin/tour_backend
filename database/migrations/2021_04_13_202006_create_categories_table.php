@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name_uz')->nullable();
             $table->string('name_ru')->nullable();
+            $table->string('name_en')->nullable();
             $table->integer('parent_id')->default(0);
             $table->timestamps();
         });

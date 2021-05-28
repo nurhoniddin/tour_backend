@@ -12,20 +12,25 @@ class CreatePostsTable extends Migration
      * @return void
      */
     public function up()
-    {  
+    {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title_uz')->nullable();
             $table->string('title_ru')->nullable();
+            $table->string('title_en')->nullable();
             $table->string('description_uz',120)->nullable();
             $table->string('description_ru',120)->nullable();
+            $table->string('description_en',120)->nullable();
             $table->text('content_uz')->nullable();
             $table->text('content_ru')->nullable();
+            $table->text('content_en')->nullable();
             $table->string('image')->nullable();
             $table->string('keywords_uz')->nullable();
             $table->string('keywords_ru')->nullable();
+            $table->string('keywords_en')->nullable();
             $table->string('meta_description_uz')->nullable();
             $table->string('meta_description_ru')->nullable();
+            $table->string('meta_description_en')->nullable();
             $table->string('file')->nullable();
             $table->integer('category_id')->nullable();
             $table->integer('views')->default(0);

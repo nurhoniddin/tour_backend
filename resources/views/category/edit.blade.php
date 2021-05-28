@@ -44,6 +44,11 @@
                                                    data-toggle="pill" href="#pills-profile" role="tab"
                                                    aria-controls="pills-profile" aria-selected="false">RU</a>
                                             </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-profile-tab"
+                                                   data-toggle="pill" href="#pills-profile22" role="tab"
+                                                   aria-controls="pills-profile" aria-selected="false">EN</a>
+                                            </li>
                                         </ul>
                                         <div class="tab-content" id="pills-tabContent">
                                             <div class="tab-pane fade show active" id="pills-home"
@@ -62,7 +67,14 @@
                                                     <input type="text" value="{{ $category->name_ru }}" name="name_ru"
                                                            class="form-control" id="name_ru">
                                                 </div>
-
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-profile22" role="tabpanel"
+                                                 aria-labelledby="pills-contact-tab">
+                                                <div class="form-group">
+                                                    <label for="name_ru">Kategoriya En</label>
+                                                    <input type="text" value="{{ $category->name_en }}" name="name_en"
+                                                           class="form-control" id="name_ru">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">

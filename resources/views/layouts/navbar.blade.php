@@ -36,17 +36,17 @@
         </li>
 {{--        dropdown new menu--}}
         {{--        dropdown new menu--}}
-        <li class="{{ request()->routeIs('tags.index') ? 'active' : '' }}">
-            <a href="{{ route('tags.index') }}">
-                <i class="fa fa-tags"></i> <span class="text-uppercase">Teglar
-              <span class="badge badge-primary">
-                      @php
-                          echo \App\Models\Tag::all()->count();
-                      @endphp
-              </span>
-                </span>
-            </a>
-        </li>
+{{--        <li class="{{ request()->routeIs('tags.index') ? 'active' : '' }}">--}}
+{{--            <a href="{{ route('tags.index') }}">--}}
+{{--                <i class="fa fa-tags"></i> <span class="text-uppercase">Teglar--}}
+{{--              <span class="badge badge-primary">--}}
+{{--                      @php--}}
+{{--                          echo \App\Models\Tag::all()->count();--}}
+{{--                      @endphp--}}
+{{--              </span>--}}
+{{--                </span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
 
 
 {{--        <li class="{{ request()->routeIs('questions.index') ? 'active' : '' }}">--}}
@@ -72,17 +72,17 @@
                 </span>
             </a>
         </li>
-        <li class="{{ request()->routeIs('comment.index') ? 'active' : '' }}">
-            <a href="{{ route('comment.index') }}">
-                <i class="fa fa-list"></i> <span class="text-uppercase">Komment
-                     <span class="badge badge-primary">
-                      @php
-                          echo \App\Models\Comment::all()->count();
-                      @endphp
-              </span>
-                </span>
-            </a>
-        </li>
+{{--        <li class="{{ request()->routeIs('comment.index') ? 'active' : '' }}">--}}
+{{--            <a href="{{ route('comment.index') }}">--}}
+{{--                <i class="fa fa-list"></i> <span class="text-uppercase">Komment--}}
+{{--                     <span class="badge badge-primary">--}}
+{{--                      @php--}}
+{{--                          echo \App\Models\Comment::all()->count();--}}
+{{--                      @endphp--}}
+{{--              </span>--}}
+{{--                </span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <li class="{{ request()->routeIs('page.index') ? 'active' : '' }}">
             <a href="{{ route('page.index') }}">
                 <i class="fa fa-file-text-o"></i> <span class="text-uppercase">Platforma haqida

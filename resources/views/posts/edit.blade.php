@@ -35,10 +35,6 @@
                                                         <label for="name_uz"> Image</label>
                                                         <input type="file" name="image" class="form-control" required id="name_uz" >
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="name_uz"> File</label>
-                                                        <input type="file" name="file" class="form-control" id="name_uz" >
-                                                    </div>
                                                     <br>
                                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                         <li class="nav-item" role="presentation">
@@ -50,6 +46,11 @@
                                                             <a class="nav-link" id="pills-profile-tab"
                                                                data-toggle="pill" href="#pills-profile" role="tab"
                                                                aria-controls="pills-profile" aria-selected="false">RU</a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" id="pills-profile-tab"
+                                                               data-toggle="pill" href="#pills-profile22" role="tab"
+                                                               aria-controls="pills-profile" aria-selected="false">EN</a>
                                                         </li>
                                                     </ul>
                                                     <div class="tab-content" id="pills-tabContent">
@@ -97,6 +98,29 @@
                                                             <div class="form-group">
                                                                 <label for="meta_description_ru">Meta Matn RU</label>
                                                                 <input type="text" name="meta_description_ru" class="form-control" value="{{ $post->meta_description_ru }}"  id="meta_description_ru" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pills-profile22" role="tabpanel"
+                                                             aria-labelledby="pills-contact-tab">
+                                                            <div class="form-group">
+                                                                <label for="name_uz">Nomi</label>
+                                                                <input type="text" value="{{ $post->title_en}}" name="title_en" class="form-control" id="name_uz" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="name_uz"> Qisqacha</label>
+                                                                <input type="text" value="{{ $post->description_en}}" name="description_en" class="form-control" id="name_uz" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="name_uz"> To'liq</label>
+                                                                <textarea class="form-control" id="editor3" name="content_en">{{ $post->content_en }}</textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="keywords_ru">Kalit So'zlar RU</label>
+                                                                <input type="text" name="keywords_en" class="form-control" value="{{ $post->keywords_en }}"  id="keywords_ru" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="meta_description_ru">Meta Matn RU</label>
+                                                                <input type="text" name="meta_description_en" class="form-control" value="{{ $post->meta_description_en }}"  id="meta_description_ru" >
                                                             </div>
                                                         </div>
                                                     </div>

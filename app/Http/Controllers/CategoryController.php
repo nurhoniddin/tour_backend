@@ -45,6 +45,7 @@ class CategoryController extends Controller
         $data = new Category();
         $data->name_uz = $request->input('name_uz');
         $data->name_ru = $request->input('name_ru');
+        $data->name_en = $request->input('name_en');
         $data->parent_id = $request->input('parent_id');
        $data->save();
        return redirect()->route('category.index')
@@ -88,6 +89,7 @@ class CategoryController extends Controller
         $cat = Category::findOrFail($id);
         $cat->name_uz = $request->name_uz;
         $cat->name_ru = $request->name_ru;
+        $cat->name_en = $request->name_en;
         $cat->parent_id = $request->parent_id;
         $cat->save();
         return redirect()->route('category.index')->with('success','Kategory O`zgartirildi');

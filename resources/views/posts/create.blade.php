@@ -34,23 +34,6 @@
                                                         <label for="name_uz"> Image</label>
                                                         <input type="file" name="image" class="form-control" required id="name_uz" >
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="name_uz"> File</label>
-                                                        <input type="file" name="file" class="form-control" id="name_uz" >
-                                                    </div>
-                                                    <label for="name_uz"> Teglar</label>
-                                                    <table class="table table-bordered" id="dynamicAddRemove">
-                                                    <tr>
-                                                    <th>Tag uz</th>
-                                                    <th>Tag ru</th>
-                                                    <th>Action</th>
-                                                    </tr>
-                                                    <tr>
-                                                    <td><input type="text" name="name_uz[]" placeholder="tag uz" class="form-control" /></td>
-                                                    <td><input type="text" name="name_ru[]" placeholder="tag ru" class="form-control" /></td>
-                                                    <td><button type="button" name="add" id="add-btn" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
-                                                    </tr>
-                                                    </table>
                                                     <br>
                                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                         <li class="nav-item" role="presentation">
@@ -62,6 +45,11 @@
                                                             <a class="nav-link" id="pills-profile-tab"
                                                                data-toggle="pill" href="#pills-profile" role="tab"
                                                                aria-controls="pills-profile" aria-selected="false">RU</a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" id="pills-profile-tab"
+                                                               data-toggle="pill" href="#pills-profile22" role="tab"
+                                                               aria-controls="pills-profile" aria-selected="false">EN</a>
                                                         </li>
                                                     </ul>
                                                     <div class="tab-content" id="pills-tabContent">
@@ -109,6 +97,29 @@
                                                             <div class="form-group">
                                                                 <label for="meta_description_ru">Meta Matn RU</label>
                                                                 <input type="text" name="meta_description_ru" class="form-control"   id="meta_description_ru" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pills-profile22" role="tabpanel"
+                                                             aria-labelledby="pills-contact-tab">
+                                                            <div class="form-group">
+                                                                <label for="name_uz">Nomi</label>
+                                                                <input type="text" name="title_en" maxlength="50" class="form-control" id="name_uz" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="description_ru">Matn English</label>
+                                                                <input type="text" name="description_en" maxlength="120" class="form-control" id="description_ru" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="name_uz"> To'liq</label>
+                                                                <textarea class="form-control" id="editor3" name="content_en"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="keywords_ru">Kalit So'zlar EN</label>
+                                                                <input type="text" name="keywords_en" class="form-control"   id="keywords_ru" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="meta_description_ru">Meta Matn EN</label>
+                                                                <input type="text" name="meta_description_en" class="form-control"   id="meta_description_ru" >
                                                             </div>
                                                         </div>
                                                         <div class="form-group">

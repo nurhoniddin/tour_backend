@@ -80,15 +80,20 @@ class PostController extends Controller
 
         $data->title_uz = $request->title_uz;
         $data->title_ru = $request->title_ru;
+        $data->title_en = $request->title_en;
         $data->description_uz = $request->description_uz;
         $data->description_ru = $request->description_ru;
+        $data->description_en = $request->description_en;
         $data->content_uz = $request->content_uz;
         $data->content_ru = $request->content_ru;
+        $data->content_en = $request->content_en;
         $data->category_id = $request->category_id;
 	    $data->keywords_uz = $request->keywords_uz;
 	    $data->keywords_ru = $request->keywords_ru;
+        $data->keywords_en = $request->keywords_en;
 	    $data->meta_description_uz = $request->meta_description_uz;
 	    $data->meta_description_ru = $request->meta_description_ru;
+        $data->meta_description_en = $request->meta_description_en;
         $data->status = $request->input('status');
 
         if ($request->hasFile('image')) {
@@ -129,15 +134,20 @@ class PostController extends Controller
 
         $data->title_uz = $request->input('title_uz');
         $data->title_ru = $request->input('title_ru');
+        $data->title_en = $request->input('title_en');
         $data->description_uz = $request->input('description_uz');
         $data->description_ru = $request->input('description_ru');
+        $data->description_en = $request->input('description_en');
         $data->content_uz = $request->input('content_uz');
         $data->content_ru = $request->input('content_ru');
+        $data->content_en = $request->input('content_en');
         $data->category_id = $request->input('category_id');
 	    $data->keywords_uz = $request->keywords_uz;
 	    $data->keywords_ru = $request->keywords_ru;
+        $data->keywords_en = $request->keywords_en;
 	    $data->meta_description_uz = $request->meta_description_uz;
 	    $data->meta_description_ru = $request->meta_description_ru;
+        $data->meta_description_en = $request->meta_description_en;
 	    $data->status = $request->input('status');
 
         if ($request->hasFile('image')) {
@@ -157,20 +167,20 @@ class PostController extends Controller
             Notification::send($data, new InvoicePaid());
         }
 
-        $post_id = DB::getPdo()->lastInsertId();
+//        $post_id = DB::getPdo()->lastInsertId();
+//
+//        $data = $request->all();
 
-        $data = $request->all();
-
-        $tag = [];
-        for($i= 0; $i < count($data['name_uz']); $i++){
-            $tag[] = [
-                'post_id' => $post_id,
-                'name_uz' => $data['name_uz'][$i],
-                'name_ru' => $data['name_ru'][$i],
-
-            ];
-        }
-        DB::table('tags')->insert($tag);
+//        $tag = [];
+//        for($i= 0; $i < count($data['name_uz']); $i++){
+//            $tag[] = [
+//                'post_id' => $post_id,
+//                'name_uz' => $data['name_uz'][$i],
+//                'name_ru' => $data['name_ru'][$i],
+//
+//            ];
+//        }
+//        DB::table('tags')->insert($tag);
 
 	    return redirect()->route('posts.index')
             ->with('success', 'Yangilik yaratildi');
