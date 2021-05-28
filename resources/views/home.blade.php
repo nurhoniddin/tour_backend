@@ -187,7 +187,7 @@
                        <div id="collapseOne" class="collapse   " aria-labelledby="headingOne" data-parent="#accordionExample">
                            <div class="card-body">
                                <a class="btn btn-outline-primary" href="#"> Ma'muriyatning vakolatlari</a>
-                               <a class="btn btn-outline-primary" href="#"> Prezident qаrоr va fаrmопlаri</a>
+                               <a class="btn btn-outline-primary" href="{{ route('decision.index') }}"> Prezident qаrоr va fаrmопlаri</a>
                                <a class="btn btn-outline-primary" href="#"> Hukumat qarorlari</a>
                                <a class="btn btn-outline-primary" href="#">Qoida va tavsiyalar</a>
                            </div>
