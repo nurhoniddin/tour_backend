@@ -10,7 +10,7 @@
             border-radius: 5px;
             transition: .3s linear all;
             background-color: #22143F;
-            font-size: 41px;
+            font-size: 20px;
         }
 
         .card-counter:hover{
@@ -47,7 +47,7 @@
             position: absolute;
             right: 35px;
             top: 20px;
-            font-size: 32px;
+            font-size: 20px;
             display: block;
         }
 
@@ -59,7 +59,7 @@
             text-transform: capitalize;
             opacity: 0.5;
             display: block;
-            font-size: 18px;
+            font-size: 12px;
         }
         .extra-menu{
             margin: 5%;
@@ -286,6 +286,17 @@
                                  @endphp
                             </span>
                             <span class="count-name">Logotiplar</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-counter ">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="count-numbers">
+                                 @php
+                                     echo \App\Models\Decision::all()->count();
+                                 @endphp
+                            </span>
+                            <span class="count-name">prezident qаrоr va fаrmопlаri</span>
                         </div>
                     </div>
                 </div>
