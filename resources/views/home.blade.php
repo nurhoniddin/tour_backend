@@ -111,9 +111,8 @@
 
                                     <div id="mamuriyat" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <a class="btn btn-outline-primary" href="#"> Boshqaruv</a>
-                                            <a class="btn btn-outline-primary" href="#"> Ma'muriyat tuzilmasi</a>
-                                            <a class="btn btn-outline-primary" href="#"> xizmat vazifalari</a>
+                                            <a class="btn btn-outline-primary" href="{{ route('staff.index') }}"> Boshqaruv</a>
+                                            <a class="btn btn-outline-primary" href="{{ route('staff.index') }}"> Ma'muriyat tuzilmasi</a>
                                         </div>
                                     </div>
 

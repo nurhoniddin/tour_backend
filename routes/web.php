@@ -53,6 +53,15 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('posts/download/{id}', [App\Http\Controllers\PostController::class, 'downloadFile'])->name('posts.downloadFile');
 //    Route::get('toTelegram/{post}',[\App\Http\Controllers\PostController::class,'toTelegram']);
 
+// Route Staff List
+    Route::get('staff', [App\Http\Controllers\StaffController::class, 'index'])->name('staff.index');
+    Route::get('staff/create', [App\Http\Controllers\StaffController::class, 'create'])->name('staff.create');
+    Route::get('staff/edit/{id}', [App\Http\Controllers\StaffController::class, 'edit'])->name('staff.edit');
+    Route::post('staff/store', [App\Http\Controllers\StaffController::class, 'store'])->name('staff.store');
+    Route::patch('staff/update/{id}', [App\Http\Controllers\StaffController::class, 'update'])->name('staff.update');
+    Route::delete('staff/destroy/{id}', [App\Http\Controllers\StaffController::class, 'destroy'])->name('staff.destroy');
+    Route::get('staff/show/{id}', [App\Http\Controllers\StaffController::class, 'show'])->name('staff.show');
+
 // Route Tags List
     Route::get('tags', [App\Http\Controllers\TagController::class, 'index'])->name('tags.index');
     Route::get('tags/edit/{id}', [App\Http\Controllers\TagController::class, 'edit'])->name('tags.edit');
