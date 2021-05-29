@@ -74,7 +74,7 @@
     <div class="content-wrapper">
         <div class="container-fluid">
             <p>
-                <a class="btn btn-outline-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
                     menu
                 </a>
             </p>
@@ -96,7 +96,7 @@
                                         <div class="card-body">
                                             <a class="btn btn-outline-primary" href="#"> Ma'muriyatning vakolatlari</a>
                                             <a class="btn btn-outline-primary" href="{{ route('decision.index') }}"> Prezident qаrоr va fаrmопlаri</a>
-                                            <a class="btn btn-outline-primary" href="#"> Hukumat qarorlari</a>
+                                            <a class="btn btn-outline-primary" href="{{ route('decision.index') }}"> Hukumat qarorlari</a>
                                             <a class="btn btn-outline-primary" href="#">Qoida va tavsiyalar</a>
                                         </div>
                                     </div>
@@ -131,7 +131,7 @@
                                             <a class="btn btn-outline-primary" href="#"> E-Executive auksionida sotish uсhuп mavjud bo'lgan уеr uchastkalari</a>
                                             <a class="btn btn-outline-primary" href="#"> Ariza|ar qabul qilish</a>
                                             <a class="btn btn-outline-primary" href="#"> Ochiq ma'lumotlar</a>
-                                            <a class="btn btn-outline-primary" href="#"> Vitual qabul</a>
+                                            <a class="btn btn-outline-primary" href="{{ route('decision.index') }}"> Vitual qabul</a>
                                             <a class="btn btn-outline-primary" href="#"> Elektron hisobotlar</a>
                                             <a class="btn btn-outline-primary" href="#"> Bo'sh o'rinlar</a>
                                             <a class="btn btn-outline-primary" href="#"> Saytda ro'yxatdan o'ting</a>
@@ -286,17 +286,6 @@
                                  @endphp
                             </span>
                             <span class="count-name">Logotiplar</span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card-counter ">
-                            <i class="fa fa-picture-o"></i>
-                            <span class="count-numbers">
-                                 @php
-                                     echo \App\Models\Decision::all()->count();
-                                 @endphp
-                            </span>
-                            <span class="count-name">prezident qаrоr va fаrmопlаri</span>
                         </div>
                     </div>
                 </div>
