@@ -36,7 +36,7 @@
     }
 
     .logo{
-        padding-top: 6%;
+        padding-top: 10%;
     }
 </style>
 <body>
