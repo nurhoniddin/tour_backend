@@ -34,6 +34,28 @@
                 </span>
             </a>
         </li>
+        <li class="{{ request()->routeIs('gcategory.index') ? 'active' : '' }}">
+            <a href="{{ route('gcategory.index') }}">
+                <i class="fa fa-photo"></i> <span class="text-uppercase">Gallery Kategory
+                    <span class="badge badge-primary">
+                      @php
+                          echo \App\Models\Gcategory::all()->count();
+                      @endphp
+                    </span>
+                </span>
+            </a>
+        </li>
+        <li class="{{ request()->routeIs('gallery.index') ? 'active' : '' }}">
+            <a href="{{ route('gallery.index') }}">
+                <i class="fa fa-file-image-o"></i> <span class="text-uppercase">Gallery
+                    <span class="badge badge-primary">
+                      @php
+                          echo \App\Models\Gallery::all()->count();
+                      @endphp
+                    </span>
+                </span>
+            </a>
+        </li>
 {{--        dropdown new menu--}}
         {{--        dropdown new menu--}}
 {{--        <li class="{{ request()->routeIs('tags.index') ? 'active' : '' }}">--}}

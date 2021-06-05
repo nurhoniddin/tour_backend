@@ -62,6 +62,22 @@ Route::group(['middleware' => 'auth'],function () {
     Route::delete('staff/destroy/{id}', [App\Http\Controllers\StaffController::class, 'destroy'])->name('staff.destroy');
     Route::get('staff/show/{id}', [App\Http\Controllers\StaffController::class, 'show'])->name('staff.show');
 
+// Route Gcategory List
+    Route::get('gcategory', [App\Http\Controllers\GcategoryController::class, 'index'])->name('gcategory.index');
+    Route::get('gcategory/create', [App\Http\Controllers\GcategoryController::class, 'create'])->name('gcategory.create');
+    Route::get('gcategory/edit/{id}', [App\Http\Controllers\GcategoryController::class, 'edit'])->name('gcategory.edit');
+    Route::post('gcategory/store', [App\Http\Controllers\GcategoryController::class, 'store'])->name('gcategory.store');
+    Route::patch('gcategory/update/{id}', [App\Http\Controllers\GcategoryController::class, 'update'])->name('gcategory.update');
+    Route::delete('gcategory/destroy/{id}', [App\Http\Controllers\GcategoryController::class, 'destroy'])->name('gcategory.destroy');
+
+// Route Gallery List
+    Route::get('gallery', [App\Http\Controllers\GalleryController::class, 'index'])->name('gallery.index');
+    Route::get('gallery/create', [App\Http\Controllers\GalleryController::class, 'create'])->name('gallery.create');
+    Route::get('gallery/edit/{id}', [App\Http\Controllers\GalleryController::class, 'edit'])->name('gallery.edit');
+    Route::post('gallery/store', [App\Http\Controllers\GalleryController::class, 'store'])->name('gallery.store');
+    Route::patch('gallery/update/{id}', [App\Http\Controllers\GalleryController::class, 'update'])->name('gallery.update');
+    Route::delete('gallery/destroy/{id}', [App\Http\Controllers\GalleryController::class, 'destroy'])->name('gallery.destroy');
+
 // Route Tags List
     Route::get('tags', [App\Http\Controllers\TagController::class, 'index'])->name('tags.index');
     Route::get('tags/edit/{id}', [App\Http\Controllers\TagController::class, 'edit'])->name('tags.edit');
