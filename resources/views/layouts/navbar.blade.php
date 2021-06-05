@@ -158,49 +158,122 @@
 
 <!--Start topbar header-->
 <header class="topbar-nav">
+	   <nav class="navbar navbar-expand">
 
-    <nav class="navbar navbar-expand fixed-top">
+		   <ul class="navbar-nav mr-auto align-items-center">
+			   <li class="nav-item">
+				   <a class="nav-link toggle-menu" href="javascript:void();">
+					   <i class="icon-menu menu-icon"></i>
+				   </a>
+			   </li>
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Qonunchilik
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyatning vakolatlari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Prezident qаrоr va fаrmопlаri</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Hukumat qarorlari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#">Qoida va tavsiyalar</a></button>
+				   </div>
+			   </div>
 
-        <ul class="navbar-nav mr-auto align-items-center">
-            <li class="nav-item">
-                <a class="nav-link toggle-menu" href="javascript:void();">
-                    <i class="icon-menu menu-icon"></i>
-                </a>
-            </li>
-        </ul>
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Ma'muriyat
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('staff.index') }}"> Boshqaruv</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('staff.index') }}"> Ma'muriyat tuzilmasi</a></button>
 
-        <ul class="navbar-nav align-items-center right-nav-link">
+				   </div>
+			   </div>
 
-            <li class="nav-item">
-                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Xizmatlar
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> E-Executive auksionida qatnashish tartibi</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> E-Executive auksionida sotish uсhuп mavjud bo'lgan уеr uchastkalari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ariza|ar qabul qilish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ochiq ma'lumotlar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Vitual qabul</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Elektron hisobotlar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Bo'sh o'rinlar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Saytda ro'yxatdan o'ting</a></button>
+
+				   </div>
+			   </div>
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Afzalliklar
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Yashash uchun subsidiyalar ajratish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> sanitar-gigienik binolar uchun уеr ajratish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Тurореrаtоrlаr va gidlar uсhuп grantlar ajratish</a></button>
+
+				   </div>
+			   </div>
+
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Jizzax viloyatining turizm salohiyati
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Roliklar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Маqоlаlаr</a></button>
+					   <button class="dropdown-item" type="button"> <a class="btn btn-outline-primary text-white" href="#"> Sayyohlik yo'nalishlari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Joylashtirish vositalari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Diqqatga sаzоvor joylar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ish olib borilmoqda</a></button>
+				   </div>
+			   </div>
+
+			   <div class="dropdown">
+				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Aloqa
+				   </button>
+				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyat bilan aloqa цsullari</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ijtimoiy tarmoqlardagi sahifalar</a></button>
+				   </div>
+			   </div>
+		   </ul>
+
+		   <ul class="navbar-nav align-items-center right-nav-link">
+
+			   <li class="nav-item">
+				   <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
                     <span class="user-profile">
                         <img src="{{ asset('assets/admin.jpg') }}" class="img-circle"
-                                                    alt="user avatar"></span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                    <li class="dropdown-item user-details">
-                        <a href="javaScript:void();">
-                            <div class="media">
-                                <div class="avatar"><img class="align-self-start mr-3"
-                                                         src="{{ asset('assets/admin.jpg') }}" alt="user avatar">
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-2 user-title">Role: <span class="badge badge-success">{{ Auth::user()->name ?? null }}</span></h6>
-                                    <p class="user-subtitle">{{ Auth::user()->email ?? null }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="dropdown-item">
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <button type="submit" class="btn btn-success bg-transparient">
-                                Chiqish
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+                             alt="user avatar"></span>
+				   </a>
+				   <ul class="dropdown-menu dropdown-menu-right">
+					   <li class="dropdown-item user-details">
+						   <a href="javaScript:void();">
+							   <div class="media">
+								   <div class="avatar"><img class="align-self-start mr-3"
+								                            src="{{ asset('assets/admin.jpg') }}" alt="user avatar">
+								   </div>
+								   <div class="media-body">
+									   <h6 class="mt-2 user-title">Role: <span class="badge badge-success">{{ Auth::user()->name ?? null }}</span></h6>
+									   <p class="user-subtitle">{{ Auth::user()->email ?? null }}</p>
+								   </div>
+							   </div>
+						   </a>
+					   </li>
+					   <li class="dropdown-item">
+						   <form action="{{ route('logout') }}" method="post">
+							   @csrf
+							   <button type="submit" class="btn btn-success bg-transparient">
+								   Chiqish
+							   </button>
+						   </form>
+					   </li>
+				   </ul>
+			   </li>
+		   </ul>
+	   </nav>
 </header>
