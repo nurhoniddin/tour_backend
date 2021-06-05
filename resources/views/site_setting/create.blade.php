@@ -70,10 +70,10 @@
 											<label for="instagram">Instagram link <i class="fa fa-instagram" style="font-size: 17px"></i></label>
 											<input type="text" name="instagram" class="form-control" id="instagram">
 										</div>
-										<div class="form-group">
-											<label for="tik_tok">tik-tok link<i class="fa fa-music" style="font-size: 17px"></i></label>
-											<input type="text" name="tik_tok" class="form-control" id="tik_tok">
-										</div>
+{{--										<div class="form-group">--}}
+{{--											<label for="tik_tok">tik-tok link<i class="fa fa-music" style="font-size: 17px"></i></label>--}}
+{{--											<input type="text" name="tik_tok" class="form-control" id="tik_tok">--}}
+{{--										</div>--}}
 										<div class="form-group">
 											<label for="facebook">facebook link <i class="fa fa-facebook-official" style="font-size: 17px"></i></label>
 											<input type="text" name="facebook" class="form-control" id="facebook">
@@ -82,10 +82,10 @@
 											<label for="youtube">youtube link <i class="fa fa-youtube" style="font-size: 17px"></i></label>
 											<input type="text" name="youtube" class="form-control" id="youtube">
 										</div>
-										<div class="form-group">
-											<label for="telegram">telegram link <i class="fa fa-telegram" style="font-size: 17px"></i></label>
-											<input type="text" name="telegram" class="form-control" id="telegram">
-										</div>
+{{--										<div class="form-group">--}}
+{{--											<label for="telegram">telegram link <i class="fa fa-telegram" style="font-size: 17px"></i></label>--}}
+{{--											<input type="text" name="telegram" class="form-control" id="telegram">--}}
+{{--										</div>--}}
 										<div class="form-group">
 											<button type="submit" class="btn btn-light px-5"><i class="fa fa-save"></i>
 												Saqlash
