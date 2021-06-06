@@ -222,24 +222,33 @@
 					   Jizzax viloyatining turizm salohiyati
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Roliklar</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Маqоlаlаr</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Roliklar</a></button>
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Маqоlаlаr</a></button>--}}
 					   <button class="dropdown-item" type="button"> <a class="btn btn-outline-primary text-white" href="#"> Sayyohlik yo'nalishlari</a></button>
 					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Joylashtirish vositalari</a></button>
 					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Diqqatga sаzоvor joylar</a></button>
 					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ish olib borilmoqda</a></button>
 				   </div>
 			   </div>
-
 			   <div class="dropdown">
 				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					   Aloqa
+					   Investorlar
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyat bilan aloqa цsullari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ijtimoiy tarmoqlardagi sahifalar</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">suffa</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">o'riklisoy</a></button>
 				   </div>
 			   </div>
+
+{{--			   <div class="dropdown">--}}
+{{--				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--					   Aloqa--}}
+{{--				   </button>--}}
+{{--				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyat bilan aloqa цsullari</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ijtimoiy tarmoqlardagi sahifalar</a></button>--}}
+{{--				   </div>--}}
+{{--			   </div>--}}
 		   </ul>
 
 		   <ul class="navbar-nav align-items-center right-nav-link">

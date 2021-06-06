@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DecisionController;
+use App\Http\Controllers\InvestorController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RoleController;
@@ -119,6 +120,9 @@ Route::group(['middleware' => 'auth'],function () {
 	Route::resource('logo',LogoController::class);
 	//prezident qarorlari routelinit decision
 	Route::resource('decision',DecisionController::class);
+
+	//investor route
+	Route::resource('investor',InvestorController::class);
 });
 
 Auth::routes();

@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -55,4 +56,6 @@ Route::get('logo',[\App\Http\Controllers\Api\LogoController::class,'index']);
 //statistic route
 Route::get('logo',[\App\Http\Controllers\Api\StatisticController::class,'index']);
 
+//investor route
 
+Route::post('investor/store',[\App\Http\Controllers\Api\InvestorController::class,'store']);
