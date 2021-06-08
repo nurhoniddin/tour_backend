@@ -162,7 +162,7 @@
 
 		   <ul class="navbar-nav mr-auto align-items-center">
 			   <li class="nav-item">
-				   <a class="nav-link toggle-menu" href="javascript:void();">
+				   <a class="nav-link toggle-menu" href="javascript:void()">
 					   <i class="icon-menu menu-icon"></i>
 				   </a>
 			   </li>
@@ -171,20 +171,20 @@
 					   Qonunchilik
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyatning vakolatlari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Prezident qаrоr va fаrmопlаri</a></button>
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ma'muriyatning vakolatlari</a></button>--}}
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Prezident fаrmоп  va qаrоrlari</a></button>
 					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Hukumat qarorlari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#">Qoida va tavsiyalar</a></button>
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#">Qoida va tavsiyalar</a></button>--}}
 				   </div>
 			   </div>
 
 			   <div class="dropdown">
 				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					   Ma'muriyat
+                       Direksiya
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('staff.index') }}"> Boshqaruv</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('staff.index') }}"> Ma'muriyat tuzilmasi</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('staff.index') }}"> Direksiya tuzilmasi</a></button>
 
 				   </div>
 			   </div>
@@ -194,14 +194,14 @@
 					   Xizmatlar
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> E-Executive auksionida qatnashish tartibi</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> E-Executive auksionida sotish uсhuп mavjud bo'lgan уеr uchastkalari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ariza|ar qabul qilish</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ochiq ma'lumotlar</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Vitual qabul</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Elektron hisobotlar</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Bo'sh o'rinlar</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Saytda ro'yxatdan o'ting</a></button>
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> E-Executive auksionida qatnashish tartibi</a></button>--}}
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> E-Executive auksionida sotish uсhuп mavjud bo'lgan уеr uchastkalari</a></button>
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ariza|ar qabul qilish</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ochiq ma'lumotlar</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Vitual qabul</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Elektron hisobotlar</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Bo'sh o'rinlar</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Saytda ro'yxatdan o'ting</a></button>--}}
 
 				   </div>
 			   </div>
@@ -210,26 +210,26 @@
 					   Afzalliklar
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Yashash uchun subsidiyalar ajratish</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> sanitar-gigienik binolar uchun уеr ajratish</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Тurореrаtоrlаr va gidlar uсhuп grantlar ajratish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('advantages.index') }}"> Yashash uchun subsidiyalar ajratish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('advantages.index') }}"> sanitar-gigienik binolar uchun уеr ajratish</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('advantages.index') }}"> Тurореrаtоrlаr va gidlar uсhuп grantlar ajratish</a></button>
 
 				   </div>
 			   </div>
 
-			   <div class="dropdown">
-				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					   Jizzax viloyatining turizm salohiyati
-				   </button>
-				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Roliklar</a></button>
+{{--			   <div class="dropdown">--}}
+{{--				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--					   Jizzax viloyatining turizm salohiyati--}}
+{{--				   </button>--}}
+{{--				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('decision.index') }}"> Roliklar</a></button>--}}
 {{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Маqоlаlаr</a></button>--}}
-					   <button class="dropdown-item" type="button"> <a class="btn btn-outline-primary text-white" href="#"> Sayyohlik yo'nalishlari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Joylashtirish vositalari</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Diqqatga sаzоvor joylar</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ish olib borilmoqda</a></button>
-				   </div>
-			   </div>
+{{--					   <button class="dropdown-item" type="button"> <a class="btn btn-outline-primary text-white" href="#"> Sayyohlik yo'nalishlari</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Joylashtirish vositalari</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Diqqatga sаzоvor joylar</a></button>--}}
+{{--					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="#"> Ish olib borilmoqda</a></button>--}}
+{{--				   </div>--}}
+{{--			   </div>--}}
 			   <div class="dropdown">
 				   <button class="btn btn-outline-primary text-white dropdown-toggle border-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					   Investorlar

@@ -79,6 +79,14 @@ Route::group(['middleware' => 'auth'],function () {
     Route::patch('gallery/update/{id}', [App\Http\Controllers\GalleryController::class, 'update'])->name('gallery.update');
     Route::delete('gallery/destroy/{id}', [App\Http\Controllers\GalleryController::class, 'destroy'])->name('gallery.destroy');
 
+// Route Advantages List
+    Route::get('advantages', [App\Http\Controllers\AdvantagesController::class, 'index'])->name('advantages.index');
+    Route::get('advantages/create', [App\Http\Controllers\AdvantagesController::class, 'create'])->name('advantages.create');
+    Route::get('advantages/edit/{id}', [App\Http\Controllers\AdvantagesController::class, 'edit'])->name('advantages.edit');
+    Route::post('advantages/store', [App\Http\Controllers\AdvantagesController::class, 'store'])->name('advantages.store');
+    Route::patch('advantages/update/{id}', [App\Http\Controllers\AdvantagesController::class, 'update'])->name('advantages.update');
+    Route::delete('advantages/destroy/{id}', [App\Http\Controllers\AdvantagesController::class, 'destroy'])->name('advantages.destroy');
+
 // Route Tags List
     Route::get('tags', [App\Http\Controllers\TagController::class, 'index'])->name('tags.index');
     Route::get('tags/edit/{id}', [App\Http\Controllers\TagController::class, 'edit'])->name('tags.edit');
