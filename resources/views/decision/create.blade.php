@@ -35,29 +35,29 @@
 											<li class="nav-item" role="presentation">
 												<a class="nav-link active" id="pills-home-tab"
 												   data-toggle="pill" href="#pills-home" role="tab"
-												   aria-controls="pills-home" aria-selected="true">sarlavha_uz</a>
+												   aria-controls="pills-home" aria-selected="true">uz</a>
 											</li>
 											<li class="nav-item" role="presentation">
 												<a class="nav-link" id="pills-profile-tab"
 												   data-toggle="pill" href="#pills-profile" role="tab"
-												   aria-controls="pills-profile" aria-selected="false">sarlavha_ru</a>
+												   aria-controls="pills-profile" aria-selected="false">ru</a>
 											</li>
 											<li class="nav-item" role="presentation">
 												<a class="nav-link" id="pills-profile-tab"
 												   data-toggle="pill" href="#pills-profile22" role="tab"
-												   aria-controls="pills-profile" aria-selected="false">sarlavha_en</a>
+												   aria-controls="pills-profile" aria-selected="false">en</a>
 											</li>
 										</ul>
 										<div class="tab-content" id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-home"
 											     role="tabpanel" aria-labelledby="pills-home-tab">
 												<div class="form-group">
-													<label for="name_uz">sarlavha_uz</label>
+													<label for="name_uz">sarlavha</label>
 													<input type="text" name="title_uz"  required class="form-control" id="name_uz">
 												</div>
 
 												<div class="form-group">
-													<label for="name_uz">link_uz</label>
+													<label for="name_uz">link</label>
 													<input type="text" name="link_uz" required class="form-control" id="name_uz">
 												</div>
 
@@ -65,12 +65,12 @@
 											<div class="tab-pane fade" id="pills-profile" role="tabpanel"
 											     aria-labelledby="pills-contact-tab">
 												<div class="form-group">
-													<label for="name_ru">sarlavha_ru</label>
+													<label for="name_ru">sarlavha</label>
 													<input type="text" name="title_ru" class="form-control" id="name_ru">
 												</div>
 
 												<div class="form-group">
-													<label for="name_ru">link_ru</label>
+													<label for="name_ru">link</label>
 													<input type="text" name="link_ru" class="form-control" id="name_ru">
 												</div>
 
@@ -78,12 +78,12 @@
 											<div class="tab-pane fade" id="pills-profile22" role="tabpanel"
 											     aria-labelledby="pills-contact-tab">
 												<div class="form-group">
-													<label for="name_ru">sarlavha_en</label>
+													<label for="name_ru">sarlavha</label>
 													<input type="text" name="title_en" class="form-control" id="name_ru">
 												</div>
 
 												<div class="form-group">
-													<label for="name_ru">link_en</label>
+													<label for="name_ru">link</label>
 													<input type="text" name="link_en" class="form-control" id="name_ru">
 												</div>
 
