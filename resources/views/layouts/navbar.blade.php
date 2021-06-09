@@ -151,6 +151,18 @@
                 </span>
             </a>
         </li>
+
+	    <li class="{{ request()->routeIs('urik.index') ? 'active' : '' }}">
+            <a href="{{ route('urik.index') }}">
+                <i class="fa fa-compass"></i> <span class="text-uppercase">O'riklisoy
+                     <span class="badge badge-primary">
+                      @php
+                          echo \App\Models\Urik::all()->count();
+                      @endphp
+              </span>
+                </span>
+            </a>
+        </li>
     </ul>
 
 </div>

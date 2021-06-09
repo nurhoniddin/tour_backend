@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Urik;
+use File;
 use GuzzleHttp\Psr7\Uri;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -40,7 +41,24 @@ class UrikController extends Controller
     public function store(Request $request)
     {
 	    $file= new Urik();
+
 	    $img = $request->file('cover_image')->store('cover_image','public');
+	    $files = [];
+	    if ($request->hasfile('filenames')) {
+
+		    foreach ($request->file('filenames') as $myimg) {
+
+//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+//
+//			    $myimg->move(public_path('files'), $name);
+			    $name = $myimg->store('uriklisoy','public');
+
+			    $files[] = $name;
+
+		    }
+
+	    }
+	    $sliderImageDataArray = implode("",$files);
 	    $file->title_uz = $request->title_uz;
 	    $file->title_ru = $request->title_ru;
 	    $file->title_en = $request->title_en;
@@ -52,17 +70,8 @@ class UrikController extends Controller
 	    $file->content_en = $request->content_en;
 	    $file->cover_image = $img;
 
+	    $file->images = $sliderImageDataArray;
 
-	    if ($request->hasFile('image')) {
-		    $image = $request->file('image');
-		    foreach ($image as $files) {
-			    $destinationPath = 'public/files/';
-			    $file_name = time() . "." . $files->getClientOriginalExtension();
-			    $files->move($destinationPath, $file_name);
-			    $data[] = $file_name;
-		    }
-	    }
-	    $file->images=json_encode($data);
 	    $file->save();
 	    return redirect()->route('urik.index')
 		    ->with('success','Maqola yaratildi');
@@ -110,8 +119,7 @@ class UrikController extends Controller
      */
     public function destroy(Urik $urik)
     {
-		Storage::disk('public')->delete($urik->cover_image);
-
+	    Storage::disk('public')->delete($urik->cover_image);
 		$urik->delete();
 		return back()->with('success','Malumot o\'chirildi');
     }

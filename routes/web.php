@@ -7,6 +7,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\StatisticController;
+use App\Http\Controllers\UrikController;
 use App\Http\Controllers\UsersController;
 use App\Notifications\PostPublished;
 use Illuminate\Support\Facades\Route;
@@ -131,6 +132,9 @@ Route::group(['middleware' => 'auth'],function () {
 
 	//investor route
 	Route::resource('investor',InvestorController::class);
+
+	//urik route
+	Route::resource('urik',UrikController::class);
 });
 
 Auth::routes();

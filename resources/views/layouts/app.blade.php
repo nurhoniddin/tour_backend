@@ -28,6 +28,7 @@
     <link href="{{ asset('assets/css/app-style.css') }}" rel="stylesheet"/>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.css" rel="stylesheet">
 </head>
 <style>
     body{
@@ -78,6 +79,8 @@
     <!--end color switcher-->
 
 <!-- Bootstrap core JavaScript-->
+
+<script>
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

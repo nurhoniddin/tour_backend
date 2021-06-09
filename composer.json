@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "spatie/laravel-permission": "^4.0",
-        "wulfheart/pretty_routes": "^0.3.0"
+        "wulfheart/pretty_routes": "^0.3.0",
+      "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",
