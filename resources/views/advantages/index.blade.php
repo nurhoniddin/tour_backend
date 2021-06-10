@@ -22,7 +22,7 @@
                               <thead>
                               <tr>
                                   <th scope="col">#</th>
-                                  <th scope="col">category id</th>
+                                  <th scope="col">category name</th>
                                   <th scope="col">content</th>
                                   <th width="100px" scope="col">Action</th>
                               </tr>
@@ -31,7 +31,7 @@
                               @foreach($advantages as $advantage)
                               <tr>
                                       <th scope="row">{{ $advantage->id }}</th>
-                                      <td>{{ $advantage->category_id }}</td>
+                                      <td>{{ $advantage->category->name_uz }}</td>
                                       <td>{!! $advantage->content_uz !!}</td>
                                       <td>
                                       <form action="{{ route('advantages.destroy',$advantage->id) }}" method="post">

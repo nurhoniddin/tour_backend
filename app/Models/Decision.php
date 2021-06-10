@@ -16,4 +16,9 @@ class Decision extends Model
 		'link_ru',
 		'link_en',
 	];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
 }

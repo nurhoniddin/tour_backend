@@ -22,7 +22,7 @@
                               <thead>
                               <tr>
                                   <th scope="col">#</th>
-                                  <th scope="col">category_id</th>
+                                  <th scope="col">category name</th>
                                   <th scope="col">name</th>
                                   <th scope="col">position</th>
                                   <th scope="col">image</th>
@@ -33,7 +33,7 @@
                               @foreach($staff as $staffs)
                               <tr>
                                       <th scope="row">{{ $staffs->id }}</th>
-                                      <th scope="row">{{ $staffs->category_id }}</th>
+                                      <th scope="row">{{ $staffs->category->name_uz }}</th>
                                       <td>{{ Str::limit($staffs->name_uz, 20)  }}</td>
                                       <td>{{ Str::limit($staffs->position_uz, 30) }}</td>
                                       <td>

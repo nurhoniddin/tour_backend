@@ -15,7 +15,7 @@ class DecisionController extends Controller
 	 */
 	public function index()
 	{
-		$decisions = Decision::latest()->paginate(10);
+		$decisions = Decision::with('category')->latest()->paginate(10);
 		return view('decision.index', compact('decisions'));
 	}
 

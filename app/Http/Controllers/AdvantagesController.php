@@ -10,7 +10,7 @@ class AdvantagesController extends Controller
 {
     public function index()
     {
-        $advantages = Advantages::latest()->paginate(10);
+        $advantages = Advantages::with('category')->latest()->paginate(10);
         return view('advantages.index',compact('advantages'));
     }
 

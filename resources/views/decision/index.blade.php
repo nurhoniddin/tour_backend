@@ -22,7 +22,8 @@
 									<thead>
 									<tr>
 										<th width="50px" scope="col">ID</th>
-										<th scope="col">sarlavha uz</th>
+                                        <th scope="col">kategory name</th>
+										<th scope="col">sarlavha </th>
 										<th scope="col">Link</th>
 										<th width="100px" scope="col">Action</th>
 									</tr>
@@ -31,7 +32,8 @@
 									@foreach($decisions as $decision)
 										<tr>
 											<th scope="row">{{ $decision->id }}</th>
-											<td>{{ $decision->title_uz }}</td>
+											<td>{{ $decision->category->name_uz }}</td>
+                                            <td>{{ $decision->title_uz }}</td>
 											<td>{{ $decision->link_uz }}</td>
 											<td>
 												<form action="{{ route('decision.destroy',$decision->id) }}" method="post">

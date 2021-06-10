@@ -34,9 +34,8 @@ class PostController extends Controller
 
     public function details($id)
     {
-        $details = Post::with('tag')->where('id',$id)->first();
-        $comment = Comment::where('post_id',$id)->where('status',1)->get();
-        return response()->json(compact('details','comment'));
+        $details = Post::where('id',$id)->first();
+        return response()->json(compact('details'));
     }
 
     public function search(Request $request)

@@ -8,7 +8,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="" href="{{ route('posts.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
+                            <h5 class="card-title"><a class="" href="{{ route('staff.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -68,22 +68,22 @@
                                                              aria-labelledby="pills-contact-tab">
                                                             <div class="form-group">
                                                                 <label for="name_ru">Ismi</label>
-                                                                <input type="text" name="name_ru" maxlength="50" required class="form-control" id="name_uz" >
+                                                                <input type="text" name="name_ru" maxlength="50" class="form-control" id="name_uz" >
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="position_ru">Lavozimi</label>
-                                                                <input type="text" name="position_ru" class="form-control" required maxlength="120"  id="description_uz" >
+                                                                <input type="text" name="position_ru" class="form-control" maxlength="120"  id="description_uz" >
                                                             </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="pills-profile22" role="tabpanel"
                                                              aria-labelledby="pills-contact-tab">
                                                             <div class="form-group">
                                                                 <label for="name_uz">Ismi</label>
-                                                                <input type="text" name="name_en" maxlength="50" required class="form-control" id="name_uz" >
+                                                                <input type="text" name="name_en" maxlength="50" class="form-control" id="name_uz" >
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="position_uz">Lavozimi</label>
-                                                                <input type="text" name="position_en" class="form-control" required maxlength="120"  id="description_uz" >
+                                                                <input type="text" name="position_en" class="form-control" maxlength="120"  id="description_uz" >
                                                             </div>
                                                         </div>
                                                         <div class="form-group">

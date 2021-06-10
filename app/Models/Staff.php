@@ -21,4 +21,9 @@ class Staff extends Model
         'image',
         'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
 }

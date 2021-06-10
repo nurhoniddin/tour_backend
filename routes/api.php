@@ -26,6 +26,14 @@ Route::post('contact/store',[\App\Http\Controllers\Api\ContactController::class,
 // Route Category All
 Route::get('/category', [\App\Http\Controllers\Api\CategoryController::class,'index'])->name('category');
 
+// Route Gallery Category All // Gallery kategory
+Route::get('/gcategory', [\App\Http\Controllers\Api\GcategoryController::class,'index'])->name('gcategory');
+
+// Route Gallery  All // Gallery barchasi
+Route::get('/gallery', [\App\Http\Controllers\Api\GalleryController::class,'index'])->name('gallery');
+// Route Gallery Category_id All // Gallery kategory id bilan
+Route::get('/gallery/{gcategory_id}', [\App\Http\Controllers\Api\GalleryController::class,'gallerys']);
+
 // Route Posts All
 Route::get('/posts', [\App\Http\Controllers\Api\PostController::class,'index'])->name('posts');
 // Route Category id Post
@@ -48,13 +56,22 @@ Route::post('/comment', [\App\Http\Controllers\Api\CommentController::class,'sto
 // Route About Platform
 Route::get('/page/{category_id}', [\App\Http\Controllers\Api\PageController::class,'index'])->name('page');
 
+// Route About Decision
+Route::get('/decision/{category_id}', [\App\Http\Controllers\Api\DecisionController::class,'index'])->name('decision');
+
+// Route About Staff
+Route::get('/staff/{category_id}', [\App\Http\Controllers\Api\StaffController::class,'index'])->name('staff');
+
+// Route About Advantages
+Route::get('/advantages/{category_id}', [\App\Http\Controllers\Api\AdvantagesController::class,'index'])->name('advantages');
+
 //site settings
 Route::get('/setting', [\App\Http\Controllers\Api\SiteController::class,'index']);
 
 //logo route
 Route::get('logo',[\App\Http\Controllers\Api\LogoController::class,'index']);
 //statistic route
-Route::get('logo',[\App\Http\Controllers\Api\StatisticController::class,'index']);
+Route::get('statistic',[\App\Http\Controllers\Api\StatisticController::class,'index']);
 
 //investor route
 
