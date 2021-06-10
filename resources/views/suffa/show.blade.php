@@ -15,22 +15,22 @@
 						<div class="col-md-6">
 							<strong style="text-transform: uppercase">mavzu</strong>
 							<hr>
-							{{ $urik->title_uz }}
+							{{ $suffa->title_uz }}
 							<hr>
 							<strong style="text-transform: uppercase">Qisqacha  </strong>
 							<hr>
-							{{ $urik->description_uz }}
+							{{ $suffa->description_uz }}
 							<hr>
 							<strong style="text-transform: uppercase">To'liq  </strong>
 							<hr>
-							{!! $urik->content_uz !!}
+							{!! $suffa->content_uz !!}
 							<hr>
 
 						</div>
 						<div class="col-md-6">
 							<strong style="text-transform: uppercase">Image</strong>
 							<hr>
-							<img src="{{ Storage::url($urik->cover_image) }}" style="width: 300px">
+							<img src="{{ Storage::url($suffa->cover_image) }}" style="width: 300px">
 						</div>
 					</div>
 				</div>
