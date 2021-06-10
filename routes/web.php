@@ -7,6 +7,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\StatisticController;
+use App\Http\Controllers\SuffaController;
 use App\Http\Controllers\UrikController;
 use App\Http\Controllers\UsersController;
 use App\Notifications\PostPublished;
@@ -135,6 +136,8 @@ Route::group(['middleware' => 'auth'],function () {
 
 	//urik route
 	Route::resource('urik',UrikController::class);
+	//suffa route
+	Route::resource('suffa',SuffaController::class);
 });
 
 Auth::routes();

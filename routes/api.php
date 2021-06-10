@@ -75,6 +75,11 @@ Route::get('statistic',[\App\Http\Controllers\Api\StatisticController::class,'in
 
 //investor route
 
-Route::post('investor/store',[\App\Http\Controllers\Api\InvestorController::class,'store']);//investor route
+Route::post('investor/store',[\App\Http\Controllers\Api\InvestorController::class,'store']);
+
+//uriklisoy route
 
 Route::get('urik',[\App\Http\Controllers\Api\UrikController::class,'index']);
+
+//suffa route
+Route::get('suffa',[\App\Http\Controllers\Api\SuffaController::class,'index']);

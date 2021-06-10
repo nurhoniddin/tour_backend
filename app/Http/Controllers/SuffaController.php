@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Suffa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SuffaController extends Controller
 {
@@ -14,7 +15,8 @@ class SuffaController extends Controller
      */
     public function index()
     {
-        //
+	    $suffas = Suffa::latest()->paginate(10);
+	    return view('suffa.index',compact('suffas'));
     }
 
     /**
@@ -24,7 +26,7 @@ class SuffaController extends Controller
      */
     public function create()
     {
-        //
+        return view('suffa.create');
     }
 
     /**
@@ -35,7 +37,41 @@ class SuffaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+	    $file= new Suffa();
+
+	    $img = $request->file('cover_image')->store('cover','public');
+	    $files = [];
+	    if ($request->hasfile('filenames')) {
+
+		    foreach ($request->file('filenames') as $myimg) {
+
+//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+//
+//			    $myimg->move(public_path('files'), $name);
+			    $name = $myimg->store('uriklisoy','public');
+
+			    $files[] = $name;
+
+		    }
+
+	    }
+	    $sliderImageDataArray = implode("",$files);
+	    $file->title_uz = $request->title_uz;
+	    $file->title_ru = $request->title_ru;
+	    $file->title_en = $request->title_en;
+	    $file->description_uz = $request->description_uz;
+	    $file->description_ru = $request->description_ru;
+	    $file->description_en = $request->description_en;
+	    $file->content_uz = $request->content_uz;
+	    $file->content_ru = $request->content_ru;
+	    $file->content_en = $request->content_en;
+	    $file->cover_image = $img;
+
+	    $file->images = $sliderImageDataArray;
+
+	    $file->save();
+	    return redirect()->route('suffa.index')
+		    ->with('success','Maqola yaratildi');
     }
 
     /**
@@ -46,7 +82,7 @@ class SuffaController extends Controller
      */
     public function show(Suffa $suffa)
     {
-        //
+        return view('suffa.show',compact('suffa'));
     }
 
     /**
@@ -57,7 +93,7 @@ class SuffaController extends Controller
      */
     public function edit(Suffa $suffa)
     {
-        //
+        return view('suffa.edit',compact('suffa'));
     }
 
     /**
@@ -69,7 +105,40 @@ class SuffaController extends Controller
      */
     public function update(Request $request, Suffa $suffa)
     {
-        //
+	    $img = $request->file('cover_image')->store('cover_image','public');
+	    $files = [];
+	    if ($request->hasfile('filenames')) {
+
+		    foreach ($request->file('filenames') as $myimg) {
+
+//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+//
+//			    $myimg->move(public_path('files'), $name);
+			    $name = $myimg->store('uriklisoy','public');
+
+			    $files[] = $name;
+
+		    }
+
+	    }
+	    $sliderImageDataArray = implode("",$files);
+
+	    $suffa->title_uz = $request->title_uz;
+	    $suffa->title_ru = $request->title_ru;
+	    $suffa->title_en = $request->title_en;
+	    $suffa->description_uz = $request->description_uz;
+	    $suffa->description_ru = $request->description_ru;
+	    $suffa->description_en = $request->description_en;
+	    $suffa->content_uz = $request->content_uz;
+	    $suffa->content_ru = $request->content_ru;
+	    $suffa->content_en = $request->content_en;
+	    $suffa->cover_image = $img;
+
+	    $suffa->images = $sliderImageDataArray;
+
+	    $suffa->save();
+	    return redirect()->route('suffa.index')
+		    ->with('success','Maqola yangilandi');
     }
 
     /**
@@ -80,6 +149,8 @@ class SuffaController extends Controller
      */
     public function destroy(Suffa $suffa)
     {
-        //
+	    Storage::disk('public')->delete($suffa->cover_image);
+	    $suffa->delete();
+	    return back()->with('success','Malumot o\'chirildi');
     }
 }

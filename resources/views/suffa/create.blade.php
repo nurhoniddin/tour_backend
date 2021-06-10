@@ -8,7 +8,7 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title"><a class="" href="{{ route('urik.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
+							<h5 class="card-title"><a class="" href="{{ route('suffa.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
 							@if ($errors->any())
 								<div class="alert alert-danger">
 									<ul>
@@ -22,15 +22,15 @@
 							@endif
 							<div class="row mt-3">
 								<div class="col-lg-12">
-									<form action="{{ route('urik.store') }}" method="post" enctype="multipart/form-data">
+									<form action="{{ route('suffa.store') }}" method="post" enctype="multipart/form-data">
 										@csrf
 										<label for="cover">Asosiy Rasm</label>
 										<hr>
-										<input type="file" required class="form-group" name="cover_image">
+										<input type="file" class="form-group" name="cover_image">
 										<hr>
 										<label for="multi">Rasmlar</label>
 										<hr>
-										<input type="file" required id="file-input"  name="filenames[]"   multiple/>
+										<input type="file" id="file-input"  name="filenames[]"   multiple/>
 										<span class="text-danger">{{ $errors->first('image') }}</span>
 										<div id="thumb-output"></div>
 
@@ -60,7 +60,7 @@
 													<input type="text" name="title_uz" maxlength="50" required class="form-control" id="name_uz" >
 												</div>
 												<div class="form-group">
-													<label for="description_ru">description</label>
+													<label for="description_uz">Description</label>
 													<textarea class="form-control" name="description_uz" id="description_uz" cols="30" rows="5">
 
 													</textarea>
@@ -77,7 +77,7 @@
 													<input type="text" name="title_ru" maxlength="50" class="form-control" id="name_uz" >
 												</div>
 												<div class="form-group">
-													<label for="description_ru">description</label>
+													<label for="description_uz">Description</label>
 													<textarea class="form-control" name="description_ru" id="description_ru" cols="30" rows="5">
 
 													</textarea>
@@ -119,6 +119,8 @@
 					</div><!--End Row-->
 				</div>
 			</div>
+	<!-- End container-fluid-->
+<!--End content-wrapper-->
 
 
 	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>

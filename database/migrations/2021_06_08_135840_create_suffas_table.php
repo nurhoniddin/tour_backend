@@ -15,6 +15,17 @@ class CreateSuffasTable extends Migration
     {
         Schema::create('suffas', function (Blueprint $table) {
             $table->id();
+	        $table->text('title_uz')->nullable();
+	        $table->text('title_ru')->nullable();
+	        $table->text('title_en')->nullable();
+	        $table->longText('description_uz')->nullable();
+	        $table->longText('description_ru')->nullable();
+	        $table->longText('description_en')->nullable();
+	        $table->longText('content_uz')->nullable();
+	        $table->longText('content_ru')->nullable();
+	        $table->longText('content_en')->nullable();
+	        $table->string('images')->nullable();
+	        $table->string('cover_image')->nullable();
             $table->timestamps();
         });
     }

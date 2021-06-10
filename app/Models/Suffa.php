@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Suffa extends Model
 {
     use HasFactory;
+    protected $table = 'suffas';
 }

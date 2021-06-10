@@ -8,7 +8,7 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title"><a class="" href="{{ route('urik.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
+							<h5 class="card-title"><a class="" href="{{ route('suffa.index') }}"><i class="fa fa-arrow-left"></i></a></h5>
 							@if ($errors->any())
 								<div class="alert alert-danger">
 									<ul>
@@ -22,8 +22,9 @@
 							@endif
 							<div class="row mt-3">
 								<div class="col-lg-12">
-									<form action="{{ route('urik.store') }}" method="post" enctype="multipart/form-data">
+									<form action="{{ route('suffa.update',$suffa->id) }}" method="post" enctype="multipart/form-data">
 										@csrf
+										@method('PATCH')
 										<label for="cover">Asosiy Rasm</label>
 										<hr>
 										<input type="file" required class="form-group" name="cover_image">
@@ -57,34 +58,38 @@
 											     role="tabpanel" aria-labelledby="pills-home-tab">
 												<div class="form-group">
 													<label for="name_uz">mavzu</label>
-													<input type="text" name="title_uz" maxlength="50" required class="form-control" id="name_uz" >
+													<input type="text" name="title_uz" maxlength="50" required value="{{ $suffa->title_uz }}" class="form-control" id="name_uz" >
 												</div>
 												<div class="form-group">
 													<label for="description_ru">description</label>
 													<textarea class="form-control" name="description_uz" id="description_uz" cols="30" rows="5">
-
+														{{ $suffa->description_uz }}
 													</textarea>
 												</div>
 												<div class="form-group">
 													<label for="name_uz">content</label>
-													<textarea class="form-control" id="editor1" name="content_uz"></textarea>
+													<textarea class="form-control" id="editor1" name="content_uz">
+														{{ $suffa->content_uz }}
+													</textarea>
 												</div>
 											</div>
 											<div class="tab-pane fade" id="pills-profile" role="tabpanel"
 											     aria-labelledby="pills-contact-tab">
 												<div class="form-group">
 													<label for="name_uz">mavzu</label>
-													<input type="text" name="title_ru" maxlength="50" class="form-control" id="name_uz" >
+													<input type="text" name="title_ru" value="{{ $suffa->title_ru }}" maxlength="50" class="form-control" id="name_uz" >
 												</div>
 												<div class="form-group">
 													<label for="description_ru">description</label>
 													<textarea class="form-control" name="description_ru" id="description_ru" cols="30" rows="5">
-
+																	{{ $suffa->description_ru }}
 													</textarea>
 												</div>
 												<div class="form-group">
 													<label for="name_uz"> To'liq</label>
-													<textarea class="form-control" id="editor2" name="content_ru"></textarea>
+													<textarea class="form-control" id="editor2" name="content_ru">
+														{{ $suffa->content_ru }}
+													</textarea>
 												</div>
 
 											</div>
@@ -92,17 +97,19 @@
 											     aria-labelledby="pills-contact-tab">
 												<div class="form-group">
 													<label for="name_uz">mavzu</label>
-													<input type="text" name="title_en" maxlength="50" class="form-control" id="name_uz" >
+													<input type="text" name="title_en" value="{{ $suffa->title_en }}" maxlength="50" class="form-control" id="name_uz" >
 												</div>
 												<div class="form-group">
 													<label for="description_uz">Description</label>
 													<textarea class="form-control" name="description_en" id="description_en" cols="30" rows="5">
-
+														{{ $suffa->description_en }}
 													</textarea>
 												</div>
 												<div class="form-group">
 													<label for="name_uz">content</label>
-													<textarea class="form-control" id="editor3" name="content_en"></textarea>
+													<textarea class="form-control" id="editor3" name="content_en">
+														{{ $suffa->content_en }}
+													</textarea>
 												</div>
 
 											</div>
@@ -115,10 +122,10 @@
 							</div>
 						</div>
 					</div><!--End Row-->
-						</div>
-					</div><!--End Row-->
 				</div>
-			</div>
+			</div><!--End Row-->
+		</div>
+	</div>
 
 
 	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
@@ -132,21 +139,21 @@
         filebrowserUploadUrl: '/uploader/upload.php';
         filebrowserImageUploadUrl: '/uploader/upload.php?type=Images';
 	</script>
-{{--	<script>--}}
-{{--        function loadPreview(input){--}}
-{{--            var data = $(input)[0].files; //this file data--}}
-{{--            $.each(data, function(index, file){--}}
-{{--                if(/(\.|\/)(gif|jpe?g|png)$/i.test(file.type)){--}}
-{{--                    var fRead = new FileReader();--}}
-{{--                    fRead.onload = (function(file){--}}
-{{--                        return function(e) {--}}
-{{--                            var img = $('<img height="150px"/>').addClass('thumb').attr('src', e.target.result); //create image thumb element--}}
-{{--                            $('#thumb-output').append(img);--}}
-{{--                        };                    })(file);--}}
-{{--                    fRead.readAsDataURL(file);--}}
-{{--                }--}}
-{{--            });--}}
-{{--        }--}}
-{{--	</script>--}}
+	{{--	<script>--}}
+	{{--        function loadPreview(input){--}}
+	{{--            var data = $(input)[0].files; //this file data--}}
+	{{--            $.each(data, function(index, file){--}}
+	{{--                if(/(\.|\/)(gif|jpe?g|png)$/i.test(file.type)){--}}
+	{{--                    var fRead = new FileReader();--}}
+	{{--                    fRead.onload = (function(file){--}}
+	{{--                        return function(e) {--}}
+	{{--                            var img = $('<img height="150px"/>').addClass('thumb').attr('src', e.target.result); //create image thumb element--}}
+	{{--                            $('#thumb-output').append(img);--}}
+	{{--                        };                    })(file);--}}
+	{{--                    fRead.readAsDataURL(file);--}}
+	{{--                }--}}
+	{{--            });--}}
+	{{--        }--}}
+	{{--	</script>--}}
 
 @endsection

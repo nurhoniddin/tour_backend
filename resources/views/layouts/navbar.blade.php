@@ -129,17 +129,17 @@
         </a>
         </li>
 
-        <li class="{{ request()->routeIs('statistic.index') ? 'active' : '' }}">
-            <a href="{{ route('statistic.index') }}">
-                <i class="fa fa-bar-chart"></i> <span class="text-uppercase">Statistika
-                     <span class="badge badge-primary">
-                      @php
-                          echo \App\Models\Setting::all()->count();
-                      @endphp
-              </span>
-                </span>
-            </a>
-        </li>
+{{--        <li class="{{ request()->routeIs('statistic.index') ? 'active' : '' }}">--}}
+{{--            <a href="{{ route('statistic.index') }}">--}}
+{{--                <i class="fa fa-bar-chart"></i> <span class="text-uppercase">Statistika--}}
+{{--                     <span class="badge badge-primary">--}}
+{{--                      @php--}}
+{{--                          echo \App\Models\Setting::all()->count();--}}
+{{--                      @endphp--}}
+{{--              </span>--}}
+{{--                </span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <li class="{{ request()->routeIs('logo.index') ? 'active' : '' }}">
             <a href="{{ route('logo.index') }}">
                 <i class="fa fa-picture-o"></i> <span class="text-uppercase">Logolar
@@ -158,6 +158,18 @@
                      <span class="badge badge-primary">
                       @php
                           echo \App\Models\Urik::all()->count();
+                      @endphp
+              </span>
+                </span>
+            </a>
+        </li>
+
+	    <li class="{{ request()->routeIs('suffa.index') ? 'active' : '' }}">
+            <a href="{{ route('suffa.index') }}">
+                <i class="fa fa-compass"></i> <span class="text-uppercase">Suffa
+                     <span class="badge badge-primary">
+                      @php
+                          echo \App\Models\Suffa::all()->count();
                       @endphp
               </span>
                 </span>

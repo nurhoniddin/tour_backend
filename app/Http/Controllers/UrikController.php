@@ -96,7 +96,7 @@ class UrikController extends Controller
      */
     public function edit(Urik $urik)
     {
-        //
+        return view('urik.edit',compact('urik'));
     }
 
     /**
@@ -108,7 +108,40 @@ class UrikController extends Controller
      */
     public function update(Request $request, Urik $urik)
     {
-        //
+	    $img = $request->file('cover_image')->store('cover_image','public');
+	    $files = [];
+	    if ($request->hasfile('filenames')) {
+
+		    foreach ($request->file('filenames') as $myimg) {
+
+//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+//
+//			    $myimg->move(public_path('files'), $name);
+			    $name = $myimg->store('uriklisoy','public');
+
+			    $files[] = $name;
+
+		    }
+
+	    }
+	    $sliderImageDataArray = implode("",$files);
+
+	    $urik->title_uz = $request->title_uz;
+	    $urik->title_ru = $request->title_ru;
+	    $urik->title_en = $request->title_en;
+	    $urik->description_uz = $request->description_uz;
+	    $urik->description_ru = $request->description_ru;
+	    $urik->description_en = $request->description_en;
+	    $urik->content_uz = $request->content_uz;
+	    $urik->content_ru = $request->content_ru;
+	    $urik->content_en = $request->content_en;
+	    $urik->cover_image = $img;
+
+	    $urik->images = $sliderImageDataArray;
+
+	    $urik->save();
+	    return redirect()->route('urik.index')
+		    ->with('success','Maqola yangilandi');
     }
 
     /**

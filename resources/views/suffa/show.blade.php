@@ -7,7 +7,7 @@
 		<div class="container-fluid">
 
 			<div class="row mt-3">
-				<h5 class="card-title"><a class="" href="{{ route('urik.index') }}"><i class="fa fa-arrow-left"></i></a>
+				<h5 class="card-title"><a class="" href="{{ route('suffa.index') }}"><i class="fa fa-arrow-left"></i></a>
 				</h5>
 
 				<div class="col-lg-12">
