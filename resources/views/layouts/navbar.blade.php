@@ -56,6 +56,17 @@
                 </span>
             </a>
         </li>
+        <li class="{{ request()->routeIs('decision.index') ? 'active' : '' }}">
+            <a href="{{ route('decision.index') }}">
+                <i class="fa fa-youtube-play"></i> <span class="text-uppercase">Videolar
+                    <span class="badge badge-primary">
+                      @php
+                          echo \App\Models\Decision::all()->count();
+                      @endphp
+                    </span>
+                </span>
+            </a>
+        </li>
 {{--        dropdown new menu--}}
         {{--        dropdown new menu--}}
 {{--        <li class="{{ request()->routeIs('tags.index') ? 'active' : '' }}">--}}
@@ -259,8 +270,20 @@
 					   Investorlar
 				   </button>
 				   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">suffa</a></button>
-					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">o'riklisoy</a></button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">suffa</a>
+                           <span class="badge badge-primary">
+                           @php
+                               echo \App\Models\Investor::all()->count();
+                           @endphp
+                           </span>
+                       </button>
+					   <button class="dropdown-item" type="button"><a class="btn btn-outline-primary text-white" href="{{ route('investor.index') }}">o'riklisoy</a>
+                           <span class="badge badge-primary">
+                           @php
+                               echo \App\Models\Investor::all()->count();
+                           @endphp
+                           </span>
+                       </button>
 				   </div>
 			   </div>
 
