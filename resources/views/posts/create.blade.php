@@ -123,6 +123,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
+                                                            <label for="Status">Meta image</label>
+                                                            <input type="file" name="meta_image" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
                                                             <label for="Status">Status</label>
                                                             <select class="form-control"  name="status" id="status">
                                                                 <option value="inactive">Inactive</option>

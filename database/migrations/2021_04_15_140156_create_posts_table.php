@@ -32,6 +32,7 @@ class CreatePostsTable extends Migration
             $table->string('meta_description_ru')->nullable();
             $table->string('meta_description_en')->nullable();
             $table->string('file')->nullable();
+            $table->string('meta_image')->nullable();
             $table->integer('category_id')->nullable();
             $table->integer('views')->default(0);
             $table->string('status');

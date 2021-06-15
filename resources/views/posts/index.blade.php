@@ -24,7 +24,6 @@
                                   <th scope="col">#</th>
                                   <th scope="col">title</th>
                                   <th scope="col">description</th>
-                                  <th scope="col">content</th>
                                   <th scope="col">image</th>
                                    <th scope="col">status</th>
                                   <th width="100px" scope="col">Action</th>
@@ -36,7 +35,6 @@
                                       <th scope="row">{{ $posts->id }}</th>
                                       <td>{{ Str::limit($posts->title_uz, 20)  }}</td>
                                       <td>{{ Str::limit($posts->description_uz, 30) }}</td>
-                                      <td>{{ Str::limit($posts->content_uz, 40) }}</td>
                                       <td>
                                           <img src="{{ Storage::url($posts->image) }}" style="width: 150px">
                                       </td>

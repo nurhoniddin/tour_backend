@@ -101,6 +101,11 @@ class PostController extends Controller
         $data->image = $imagePath;
         }
 
+        if ($request->hasFile('meta_image')) {
+            $imagePath = request('meta_image')->store('meta_images', 'public');
+            $data->meta_image = $imagePath;
+        }
+
         if ($request->hasFile('file')) {
         Storage::disk('public')->delete($data->file);
         $data->delete();
@@ -153,6 +158,11 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
         $imagePath = request('image')->store('post_images', 'public');
         $data->image = $imagePath;
+        }
+
+        if ($request->hasFile('meta_image')) {
+            $imagePath = request('meta_image')->store('meta_images', 'public');
+            $data->meta_image = $imagePath;
         }
 
         if ($request->hasFile('file')) {
