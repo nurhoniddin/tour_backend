@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class SuffaController extends Controller
 {
     public function index(){
-    	$suffa = Suffa::all();
-    	return response()->json(compact('suffa'));
+        $suffa = Suffa::with('suffphoto')->get();
+        return response()->json($suffa);
+//        dd($suffa);
     }
 }

@@ -24,7 +24,6 @@ class CreateUriksTable extends Migration
             $table->longText('content_uz')->nullable();
             $table->longText('content_ru')->nullable();
             $table->longText('content_en')->nullable();
-            $table->string('images')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();
         });

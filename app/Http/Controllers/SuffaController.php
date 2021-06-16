@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Suffa;
+use App\Models\SuffPhoto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class SuffaController extends Controller
@@ -40,22 +42,8 @@ class SuffaController extends Controller
 	    $file= new Suffa();
 
 	    $img = $request->file('cover_image')->store('cover','public');
-	    $files = [];
-	    if ($request->hasfile('filenames')) {
 
-		    foreach ($request->file('filenames') as $myimg) {
 
-//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
-//
-//			    $myimg->move(public_path('files'), $name);
-			    $name = $myimg->store('uriklisoy','public');
-
-			    $files[] = $name;
-
-		    }
-
-	    }
-	    $sliderImageDataArray = implode("",$files);
 	    $file->title_uz = $request->title_uz;
 	    $file->title_ru = $request->title_ru;
 	    $file->title_en = $request->title_en;
@@ -67,10 +55,27 @@ class SuffaController extends Controller
 	    $file->content_en = $request->content_en;
 	    $file->cover_image = $img;
 
-	    $file->images = $sliderImageDataArray;
-
 	    $file->save();
-	    return redirect()->route('suffa.index')
+
+        $suff_id = DB::getPdo()->lastInsertId();
+
+        if($request->hasfile('filenames'))
+        {
+            foreach($request->file('filenames') as $key => $file)
+            {
+                $path = $file->store('urik_fotos', 'public');
+                // $name = $file->getClientOriginalName();
+
+                $insert[$key]['suffa_id'] = $suff_id;
+                $insert[$key]['created_at'] = date('Y-m-d H:i:s');
+                $insert[$key]['suffa_photos'] = $path;
+
+            }
+        }
+
+        SuffPhoto::insert($insert);
+
+        return redirect()->route('suffa.index')
 		    ->with('success','Maqola yaratildi');
     }
 
