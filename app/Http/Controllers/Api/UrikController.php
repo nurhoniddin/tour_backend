@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class UrikController extends Controller
 {
     public function index(){
-    	$urik = Urik::all();
-    	return response()->json(compact('urik'));
+    	$urik = Urik::with('urikphoto')->get();
+//    	return response()->json(compact('urik'));
+        dd($urik);
     }
 }

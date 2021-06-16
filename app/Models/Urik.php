@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Urik extends Model
 {
     use HasFactory;
+    public function urikphoto(){
+        return $this->hasMany(UrikPhoto::class);
+    }
 }

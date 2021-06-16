@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Suffa extends Model
+class UrikPhoto extends Model
 {
     use HasFactory;
-    protected $table = 'suffas';
-    public function suffphoto(){
-        return $this->hasMany(SuffPhoto::class);
+    public function urik(){
+        return $this->belongsTo(UrikPhoto::class);
     }
 }

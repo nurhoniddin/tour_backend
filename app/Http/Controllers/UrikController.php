@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Urik;
+use App\Models\UrikPhoto;
 use File;
 use GuzzleHttp\Psr7\Uri;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class UrikController extends Controller
@@ -43,22 +45,22 @@ class UrikController extends Controller
 	    $file= new Urik();
 
 	    $img = $request->file('cover_image')->store('cover_image','public');
-	    $files = [];
-	    if ($request->hasfile('filenames')) {
-
-		    foreach ($request->file('filenames') as $myimg) {
-
-//			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+//	    $files = [];
+//	    if ($request->hasfile('filenames')) {
 //
-//			    $myimg->move(public_path('files'), $name);
-			    $name = $myimg->store('uriklisoy','public');
-
-			    $files[] = $name;
-
-		    }
-
-	    }
-	    $sliderImageDataArray = implode("",$files);
+//		    foreach ($request->file('filenames') as $myimg) {
+//
+////			    $name = time() . rand(1, 100) . '.' . $myimg->extension();
+////
+////			    $myimg->move(public_path('files'), $name);
+//			    $name = $myimg->store('uriklisoy','public');
+//
+//			    $files[] = $name;
+//
+//		    }
+//
+//	    }
+//	    $sliderImageDataArray = implode("",$files);
 	    $file->title_uz = $request->title_uz;
 	    $file->title_ru = $request->title_ru;
 	    $file->title_en = $request->title_en;
@@ -70,9 +72,28 @@ class UrikController extends Controller
 	    $file->content_en = $request->content_en;
 	    $file->cover_image = $img;
 
-	    $file->images = $sliderImageDataArray;
+//	    $file->images = $sliderImageDataArray;
 
 	    $file->save();
+
+        $urik_id = DB::getPdo()->lastInsertId();
+
+        if($request->hasfile('filenames'))
+        {
+            foreach($request->file('filenames') as $key => $file)
+            {
+                $path = $file->store('urik_fotos', 'public');
+                // $name = $file->getClientOriginalName();
+
+                $insert[$key]['urik_id'] = $urik_id;
+                $insert[$key]['created_at'] = date('Y-m-d H:i:s');
+                $insert[$key]['urik_photos'] = $path;
+
+            }
+        }
+
+        UrikPhoto::insert($insert);
+
 	    return redirect()->route('urik.index')
 		    ->with('success','Maqola yaratildi');
     }
