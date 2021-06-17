@@ -131,8 +131,9 @@ Route::group(['middleware' => 'auth'],function () {
 
 //prezident qarorlari routelinit decision
 	Route::resource('decision',DecisionController::class);
+//    Route::get('/decision/show/{category_id}', [\App\Http\Controllers\DecisionController::class,'index']);
 
-	//investor route
+    //investor route
 	Route::resource('investor',InvestorController::class);
 
 	//urik route

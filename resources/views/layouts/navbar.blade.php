@@ -57,7 +57,7 @@
             </a>
         </li>
         <li class="{{ request()->routeIs('decision.index') ? 'active' : '' }}">
-            <a href="{{ route('decision.index') }}">
+            <a href="{{ route('decision.show',2) }}">
                 <i class="fa fa-youtube-play"></i> <span class="text-uppercase">Videolar
                     <span class="badge badge-primary">
                       @php

@@ -70,9 +70,10 @@ class DecisionController extends Controller
 	 * @param \App\Models\Decision $decision
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show(Decision $decision)
+	public function show($category_id)
 	{
-		return view('decision.show',compact('decision'));
+        $decisions = Decision::where('category_id',$category_id)->with('category')->latest()->paginate(10);
+        return view('decision.index', compact('decisions'));
 	}
 
 	/**
