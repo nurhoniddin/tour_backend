@@ -128,7 +128,8 @@ Route::group(['middleware' => 'auth'],function () {
 	Route::resource('statistic',StatisticController::class);
 	//logo route
 	Route::resource('logo',LogoController::class);
-	//prezident qarorlari routelinit decision
+
+//prezident qarorlari routelinit decision
 	Route::resource('decision',DecisionController::class);
 
 	//investor route

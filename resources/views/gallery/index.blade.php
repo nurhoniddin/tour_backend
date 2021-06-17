@@ -31,7 +31,7 @@
                               @foreach($gallery as $gallerys)
                               <tr>
                                       <th scope="row">{{ $gallerys->id }}</th>
-                                      <th scope="row">{{ $gallerys->category_id }}</th>
+                                      <th scope="row">{{ $gallerys->gcategory->name_uz }}</th>
                                       <td>
                                           <img src="{{ Storage::url($gallerys->image) }}" style="width: 150px">
                                       </td>
